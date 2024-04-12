@@ -9,9 +9,16 @@
         .content-container {
             background-color: #808080;
             margin: 20px;
-            padding: 20px;
+            padding: 15px;
             border: 2px solid black;
             border-radius: 10px;
+            width: auto; /* Ancho fijo */
+            height: auto; /* Alto fijo */ 
+        }
+        .otro-cont{
+            margin-left: 0;
+            width: auto; /* Ancho fijo */
+            height: auto; /* Alto fijo */ 
         }
     </style>
 </head>
@@ -50,7 +57,7 @@
             <div class="row">
                 <!-- Panel Lateral -->
                 <div class="col-md-3 bg-dark text-light">
-                    <div class="py-4 px-3">
+                    <div class="py-4 px-2">
                         <h4 class="text-center mb-4">ADMIN</h4>
                         <ul class="list-unstyled mb-0">
                             <li class="mb-2"><a href="crear_cuenta.html" class="btn btn-outline-light btn-block">Crear Cuenta</a></li>
@@ -64,7 +71,7 @@
 
                 <!-- Contenido Principal -->
                 <div class="col-md-9">
-                    <div class="container mt-5">
+                    <div class="container otro-cont">
                         <div class="row justify-content-center">
                             <div class="col-md-6">
                                 <h2 class="text-center mb-4">Eliminar Productos</h2>
