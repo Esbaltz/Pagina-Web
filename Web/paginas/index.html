@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>W3.CSS Template</title>
+    <title>ENTRE VERBOS</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -46,6 +46,19 @@
             opacity: 0.8;
             transform: scale(1.05);
         }
+        .efect{
+            transition: 0.3s;
+        }
+        .efect:hover{
+            transform: scale(1.05);
+            letter-spacing: 5px;
+        }
+        .l-efect a{
+            transition: 0.5s;
+        }
+        .foot a{
+            transition: 0.3s;
+        }
     </style>
 </head>
 
@@ -54,14 +67,14 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
-            <a href="#home" class="w3-bar-item w3-button w3-wide">Entre Verbos</a>
+            <a href="index.html" class="w3-bar-item w3-button w3-wide efect">Entre Verbos</a>
             <!-- Right-sided navbar links -->
-            <div class="w3-right w3-hide-small">
-                <a href="#about" class="w3-bar-item w3-button">Tienda</a>
-                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Inicio</a>
-                <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Carrito</a>
-                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Iniciar Sesión</a>
-                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Usuario</a>
+            <div class="w3-right w3-hide-small l-efect">
+                <a href="#about" class="w3-bar-item w3-button">Inicio</a>
+                <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Tienda</a>
+                <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Carrito</a>
+                <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Iniciar Sesión</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
             </div>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -77,8 +90,8 @@
         style="display:none" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
             ×</a>
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
-        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
         <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Carrito</a>
         <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Iniciar Sesión</a>
         <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Usuario</a>
@@ -89,8 +102,8 @@
         <div class="w3-display-left w3-text-white" style="padding:48px">
             <span class="w3-jumbo w3-hide-small">Comienza tu viaje con Entre Verbos</span><br>
             <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-            <span class="w3-large">En entre Verbos puedes encontrar todo los libros que quieras.</span>
-            <p><a href="#about"
+            <span class="w3-large">En Entre Verbos puedes encontrar todo los libros que quieras.</span>
+            <p><a href="tienda.html"
                     class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Revisa
                     nuestro catálogo</a></p>
         </div>
@@ -108,14 +121,14 @@
         <!-- First Photo Grid-->
         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/Autonomous_libro.jpg" alt="Sandwich" style="width:100%">
                 </a>
                 <h3>Autonumus</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/El_hobit.jpg" alt="Steak" style="width:100%">
                 </a>
                 <h3>El hobbit</h3>
@@ -123,7 +136,7 @@
                 </p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/Holly_stephen_king.jpg" alt="Cherries" style="width:100%">
                 </a>
                 <h3>Holly</h3>
@@ -131,7 +144,7 @@
                 <p>What else?</p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/metro.jpg" alt="Pasta and Wine" style="width:100%">
                 </a>
                 <h3>Metro</h3>
@@ -147,14 +160,14 @@
         <!-- Second Photo Grid-->
         <div class="w3-row-padding w3-padding-16 w3-center">
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/historia.webp" alt="Popsicle" style="width:100%">
                 </a>
                 <h3>Breve historia del mundo</h3>
                 <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/metro.jpg" alt="Salmon" style="width:100%">
                 </a>
                 <h3>Metro</h3>
@@ -162,14 +175,14 @@
                 </p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/Holly_stephen_king.jpg" alt="Sandwich" style="width:100%">
                 </a>
                 <h3>Holly</h3>
                 <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
             <div class="w3-quarter">
-                <a href="pagina_carrito_general.html" class="img-move">
+                <a href="pagina_general_libro.html" class="img-move">
                     <img src="../img/El_hobit.jpg" alt="Croissant" style="width:100%">
                 </a>
                 <h3>El hobbit</h3>
@@ -179,10 +192,10 @@
     </div>
 
     <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-center w3-black w3-padding-64 foot">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
-    <p>Hecho por <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">Entre Verbos</a></p>
-  </footer>
+    <p>Hecho por <a href="https://www.w3schools.com/w3css/default.asp" title="Regresar al inicio" target="_blank" class="w3-hover-text-green">Entre Verbos</a></p>
+</footer>
 
     <script>
         // Modal Image Gallery
