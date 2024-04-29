@@ -1,75 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>domicilio y pagar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
 </head>
+
 <body>
     <h1 class="text-center">Finalizando compra</h1>
-    <p><hr><hr></p>
-                                <!-- Contenido Principal -->
-                                <div class="col-md-9">
-                                    <div class="container mt-5">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-6">
-                                                <h2 class="text-center mb-4">Direccion</h2>
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-user icon"></i>
-                                                        <label for="nombreCuenta" class="form-label">Direccion de su domicilio</label>
-                                                        <input type="text" class="form-control" id="nombreCuenta" placeholder="Ingrese la direccion de su domicilio">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-key icon "></i>
-                                                        <label for="password" class="form-label">N° de casa</label>
-                                                        <input type="password" class="form-control" id="password" placeholder="Ingrese el N° de casa">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-key icon "></i>
-                                                        <label for="password" class="form-label">Ingrese el nombre de la region de Chile</label>
-                                                        <input type="password" class="form-control" id="password" placeholder="Ingrese el nombre de la region">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <p>
+        <hr>
+        <hr>
+    </p>
+    <!-- Contenido Principal -->
+    <div class="col-md-9">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Direccion</h2>
+                    <form id="form1">
+                        <div class="mb-3">
+                            <i class="fa fa-user icon"></i>
+                            <label for="domicilio" class="form-label">Direccion de su domicilio</label>
+                            <input type="text" class="form-control" id="domicilio"
+                                placeholder="Ingrese la direccion de su domicilio">
+                            <div id="direccionError" class="error-message"></div>
                         </div>
-    <P><hr><hr></P>
-                                <!-- Contenido Principal -->
-                                <div class="col-md-9">
-                                    <div class="container mt-5">
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-6">
-                                                <h2 class="text-center mb-4">Informacion de su medio de pago</h2>
-                                                <form>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-user icon"></i>
-                                                        <label for="nombreCuenta" class="form-label">Ingrese su numero de target de credito</label>
-                                                        <input type="text" class="form-control" id="nombreCuenta" placeholder="N° de tarjeta">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-key icon "></i>
-                                                        <label for="password" class="form-label">Fecha de caducidad</label>
-                                                        <input type="password" class="form-control" id="password" placeholder="Ingrese el mes/año de su tarjeta">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <i class="fa fa-key icon "></i>
-                                                        <label for="password" class="form-label">N° de seguridad</label>
-                                                        <input type="password" class="form-control" id="password" placeholder="Ingrese el N° de seguridad al reverso de su tarjeta de credito">
-                                                    </div>
-                                                    <a href="../paginas/index.html" class="btn btn-primary btn-block">Finalizar Compra</a>
-                                                    <a href="../paginas/pagina_carrito_general.html" class="btn btn-primary btn-block">Cancelar compra</a>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>   
+                        <div class="mb-3">
+                            <i class="fa fa-key icon "></i>
+                            <label for="casa" class="form-label">N° de casa</label>
+                            <input type="text" class="form-control" id="casa" placeholder="Ingrese el N° de casa">
+                            <div id="nCasaError" class="error-message"></div>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fa fa-key icon "></i>
+                            <label for="region" class="form-label">Región</label>
+                            <select class="form-select" id="region">
+                                <option value="" selected disabled>Seleccione una región</option>
+                                <option value="Arica y Parinacota">Arica y Parinacota</option>
+                                <option value="Tarapacá">Tarapacá</option>
+                                <option value="Antofagasta">Antofagasta</option>
+                                <option value="Atacama">Atacama</option>
+                                <option value="Coquimbo">Coquimbo</option>
+                                <option value="Valparaíso">Valparaíso</option>
+                                <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                                <option value="Libertador General Bernardo O'Higgins">Libertador General Bernardo O'Higgins</option>
+                                <option value="Maule">Maule</option>
+                                <option value="Ñuble">Ñuble</option>
+                                <option value="Biobío">Biobío</option>
+                                <option value="La Araucanía">La Araucanía</option>
+                                <option value="Los Ríos">Los Ríos</option>
+                                <option value="Los Lagos">Los Lagos</option>
+                                <option value="Aysén del General Carlos Ibáñez del Campo">Aysén del General Carlos Ibáñez del Campo</option>
+                                <option value="Magallanes y de la Antártica Chilena">Magallanes y de la Antártica Chilena</option>
+                            </select>
+                            <div id="regionError" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Agregar Dirección</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <P>
+        <hr>
+        <hr>
+    </P>
+    <!-- Contenido Principal -->
+    <div class="col-md-9">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Informacion de su medio de pago</h2>
+                    <form id="form2">
+                        <div class="mb-3">
+                            <i class="fa fa-user icon"></i>
+                            <label for="tarjeta" class="form-label">Ingrese su numero de tarjeta de credito</label>
+                            <input type="text" class="form-control" id="tarjeta" placeholder="N° de tarjeta">
+                            <div id="tarjetaError" class="error-message"></div>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fa fa-key icon "></i>
+                            <label for="caducidad" class="form-label">Fecha de caducidad</label>
+                            <input type="texg" class="form-control" id="caducidad"
+                                placeholder="Ingrese el mes/año de su tarjeta">
+                            <div id="caducidadError" class="error-message"></div>
+                        </div>
+                        <div class="mb-3">
+                            <i class="fa fa-key icon "></i>
+                            <label for="seguridad" class="form-label">N° de seguridad</label>
+                            <input type="text" class="form-control" id="seguridad"
+                                placeholder="Ingrese el N° de seguridad al reverso de su tarjeta de credito">
+                            <div id="seguridadError" class="error-message"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Finalizar Compra</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        document.getElementById("form1").addEventListener("submit", function (event) {
+            var dom = document.getElementById("domicilio").value;
+            var casa = document.getElementById("casa").value;
+            var region = document.getElementById("region").value;
+            var direccionError = document.getElementById("direccionError");
+            var casaError = document.getElementById("nCasaError");
+            var regionError = document.getElementById("regionError");
+
+            direccionError.innerHTML = "";
+            casaError.innerHTML = "";
+            regionError.innerHTML = "";
+
+            if (dom.length < 3 || dom.length > 30) {
+                direccionError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+            if (casa.length < 3 || casa.length > 30) {
+                casaError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+            if (region.length < 3 || region.length > 30) {
+                regionError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+        });
+
+        document.getElementById("form2").addEventListener("submit", function (event) {
+            var tarjeta = document.getElementById("tarjeta").value;
+            var caducidad = document.getElementById("caducidad").value;
+            var seguridad = document.getElementById("seguridad").value;
+            var tarjetaError = document.getElementById("tarjetaError");
+            var caducidadError = document.getElementById("caducidadError");
+            var seguridadError = document.getElementById("seguridadError");
+
+            tarjetaError.innerHTML = "";
+            caducidadError.innerHTML = "";
+            seguridadError.innerHTML = "";
+
+            if (tarjeta.length < 3 || tarjeta.length > 30) {
+                tarjetaError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+            if (caducidad.length < 3 || caducidad.length > 30) {
+                caducidadError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+            if (seguridad.length < 3 || seguridad.length > 30) {
+                seguridadError.innerHTML = "xd prueba";
+                event.preventDefault();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+        flatpickr("#caducidad", {
+        dateFormat: "m/y",
+        minDate: "today",
+        disableMobile: "true" 
+    });
+});
+    </script>
+
+    
+
 </body>
+
 </html>
