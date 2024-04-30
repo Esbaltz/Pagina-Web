@@ -77,16 +77,32 @@
             </div>
         </nav>
         <div class="container p-5" id="second-navbar-content">
-            <form action="/action_page.php">
+            <form id="agregar_pro_form">
                 <h2>Eliminar Producto</h2>
                 <div class="mb-3 mt-3">
-                  <label for="email" class="form-label">ISBN del Producto</label>
-                  <input type="email" class="form-control" id="email" placeholder="Ingrese ISBN" name="email">
+                  <label for="isbn" class="form-label">ISBN del Producto</label>
+                  <input type="text" class="form-control" id="isbn" placeholder="Ingrese ISBN" required>
+                  <div id="nombre_isbn_error_1" class="error-message"></div>
                 </div>
                 <button type="submit" class="btn btn-primary">Eliminar Producto</button>
               </form>
         </div>
     </div>
+
+    <script>
+        document.getElementById("agregar_pro_form").addEventListener("submit", function(event){
+            var isbn =document.getElementById("isbn").value;
+
+            var nombre_isbn_error_1 =document.getElementById("nombre_isbn_error_1");
+
+            nombre_isbn_error_1.innerHTML = "";
+
+            if(isbn.length ==12){
+                nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
+                event.preventDefault();
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>

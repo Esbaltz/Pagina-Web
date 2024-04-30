@@ -80,20 +80,25 @@
             <form action="/action_page.php">
                 <h2>Modificar Producto</h2>
                 <div class="mb-3 mt-3">
-                  <label for="email" class="form-label">Nombre del Producto</label>
-                  <input type="email" class="form-control" id="email" placeholder="Ingrese Nombre" name="email">
+                  <label for="nombre_libr" class="form-label">Nombre del Producto</label>
+                  <input type="text" class="form-control" id="nombre_libr" placeholder="Ingrese Nombre" required>
+                  <div id="nombre_libro_ingre_error" class="error-message"></div>
                 </div>
                 <div class="mb-3 mt-3">
-                    <label for="email" class="form-label">ISBN</label>
-                    <input type="email" class="form-control" id="email" placeholder="Introducir ISBN" name="email">
+                    <label for="isbn" class="form-label">ISBN</label>
+                    <input type="text" class="form-control" id="isbn" placeholder="Introducir ISBN" required>
+                    <div id="nombre_isbn_error_1" class="error-message"></div>
                   </div>
                   <div class="mb-3 mt-3">
-                    <label for="email" class="form-label">Valor del libro</label>
-                    <input type="email" class="form-control" id="email" placeholder="Agregar valor" name="email">
+                    <label for="valor_libr" class="form-label">Valor del libro</label>
+                    <input type="text" class="form-control" id="valor_libr" placeholder="Agregar valor" required>
+                    <div id="valor_libro_error" class="error-message"></div>
+                    
                   </div>
                 <div class="mb-3">
                     <label for="comment">Agregar descripción</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    <textarea class="form-control" rows="5" id="descrip" required></textarea>
+                    <div id="descrip_error_libr" class="error-message"></div>
                 </div>
      
                 <button type="submit" class="btn btn-primary">Agregar Cuenta</button>
@@ -103,5 +108,41 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("agregar_pro_form").addEventListener("submit", function(event){
+            var nombre_libr =document.getElementById("nombre_libr").value;
+            var isbn =document.getElementById("isbn").value;
+            var valor_libr =document.getElementById("valor_libr").value;
+            var descrip =document.getElementById("descrip").value;
+
+            var nombre_libro_ingre_error =document.getElementById("nombre_libro_ingre_error");
+            var nombre_isbn_error_1 =document.getElementById("nombre_isbn_error_1");
+            var valor_libro_error =document.getElementById("valor_libro_error");
+            var descrip_error_libr =document.getElementById("descrip_error_libr");
+
+            nombre_libro_ingre_error.innerHTML = "";
+            nombre_isbn_error_1.innerHTML = "";
+            valor_libro_error.innerHTML = "";
+            descrip_error_libr.innerHTML = "";
+
+            if(nombre_libr.length < 1 ||  nombre_libr.length >60){
+                nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 2 caracteres o un maximo de 60.";
+                event.preventDefault();
+            }
+            if(isbn.length ==12){
+                nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
+                event.preventDefault();
+            }
+
+            if(valor_libr.length < 2 ||  valor_libr.length >7){
+                valor_libro_error.innerHTML = "El valor del libro ingresado ti ene que tener un paramentro minimo de 3 cifras, un maximo de 7 o no puede ingresar el valor 0 en solo.";
+                event.preventDefault();
+            }
+            if(descrip.length <10 || descrip.length >600){
+                descrip_error_libr.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 2 caracteres o un maximo de 60.";
+                event.preventDefault(); 
+            }
+    });
+    </script>
 </body>
 </html>
