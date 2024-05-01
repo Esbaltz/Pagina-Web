@@ -1,122 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina libro</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <style>
-        *{
-            max-width:100%;
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+    .w3-button {
+      transition: 0.3s;
+    }
+
+    .img-move{
+            display: block;
         }
-        body{
-            padding-top: 50px;
+        .img-move img{
+            transition: 0.3s;
         }
-        </style>
+        .img-move:hover img{
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .efect{
+            transition: 0.3s;
+        }
+        .efect:hover{
+            transform: scale(1.05);
+            letter-spacing: 5px;
+        }
+        .l-efect a{
+            transition: 0.5s;
+        }
+        .foot a{
+            transition: 0.3s;
+        }
+        .cat{
+            transition: 0.3s;
+        }
+  </style>
 </head>
-<body class="">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <img src="../img/Logo.PNG" alt="Avatar Logo" style="width:40px;" class="rounded-pill mx-3"> 
-            <a class="navbar-brand" href="#">ENTRE VERBOS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/pagina_carrito_general.html">Carrito</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="paginas_inicio_secion/Inicio_secion.html">Iniciar Sesión</a>
-                    </li>
-                </ul>
-            </div>
+
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="index.html" class="w3-bar-item w3-button w3-wide efect">Entre Verbos</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small l-efect">
+        <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Tienda</a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Carrito</a>
+        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Iniciar Sesión</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
+      ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Carrito</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Iniciar Sesión</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Usuario</a>
+  </nav>
+
+  <!-- Page content -->
+  <div class="w3-content w3-padding-16" style="max-width:1000px">
+
+    <!-- About Section -->
+    <div class="w3-row w3-padding-64" id="about">
+      <div class="w3-col m6 w3-padding-large ">
+        <img src="../img/Holly_stephen_king.jpg" class="w3-round w3-image " alt="Table Setting" width="600"
+          height="750">
+      </div>
+
+      <div class="w3-col m6 w3-padding-large w3-padding-64">
+        <h1 class="w3-center">HOLLY</h1>
+        <h3 class="w3-center">Stephen King</h3>
+        <p class="w3-large">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nisi fugiat atque
+          blanditiis maiores eveniet vero similique, accusamus, labore animi recusandae quas deleniti cupiditate
+          temporibus modi placeat fugit minus saepe.</p>
+        <div class="w3-padding-64 w3-center">
+          <p><button class="w3-button w3-gray w3-hover-black">Agregar al carrito</button></p>
         </div>
-    </nav>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- End page content -->
+  </div>
+  <div class="w3-padding-16">
+    <h1 class="w3-center w3-large w3-black" style="margin-right: 10%; margin-left: 10%;">RELACIONADOS</h1>
+  </div>
+  <div class="w3-content" style="max-width:1200px">
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-center" id="food">
+    <div class="w3-quarter">
+      <a href="pagina_general_libro.html" class="img-move">
+        <img src="../img/Autonomous_libro.jpg" alt="Sandwich" style="width:100%">
+      </a>
+      <h3>Autonumus</h3>
+      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+    <div class="w3-quarter">
+      <a href="pagina_general_libro.html" class="img-move">
+        <img src="../img/El_hobit.jpg" alt="Steak" style="width:100%">
+      </a>
+      <h3>El hobbit</h3>
+      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+      </p>
+    </div>
+    <div class="w3-quarter">
+      <a href="pagina_general_libro.html" class="img-move">
+        <img src="../img/historia.webp" alt="Cherries" style="width:100%">
+      </a>
+      <h3>Holly</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      <p>What else?</p>
+    </div>
+    <div class="w3-quarter">
+      <a href="pagina_general_libro.html" class="img-move">
+        <img src="../img/metro.jpg" alt="Pasta and Wine" style="width:100%">
+      </a>
+      <h3>Metro</h3>
+      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    </div>
+  </div>
+  </div>
 
 
-                
-    <div class="container-fluid mt-3">
-        <p><br><br><br></p>
-        <div class="row">
-            <div class="col p-3"></div>
-            <div class="col p-3"><p class="text-center" style="font-size:160%">El largo camino de la libertad</p><img src="../img/Un camino hacia la libertad.jpg" alt="Los Angeles" class=""></div>
-            <div class="col p-3"><p class="" style="font-size:130%"><br><br><br>Descripcion</p>
-                <p>Aqui va la Descripcion del libro en cuestion <br>esto hay que cambiarlo <br>por codigo automatico <br><br><br><br></p>
-            <a href="pagina_carrito_general.html" class="btn btn-primary">Agregar al carrito</a></div>
-            <div class="col p-3">
-            </div>
-        </div>
-    </div>
-            </div>
-            </div>
-        </div>
-    </div>
-        <!-- Cartas -->
-        <div class="container mt-5">
-            <h2 class="text-center"><br>RECOMENDADOS</h2>
-            <div class="row mt-2">
-                <div class="col-md-3 mt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/Autonomous_libro.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
-                            <p class="card-text">Es probablemente el mejor libro de la historia</p>
-                            <a href="pagina_general_libro.html" class="btn btn-primary">Ver libro</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/El_hobit.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
-                            <p class="card-text">Es probablemente el segundo mejor libro de la historia</p>
-                            <a href="pagina_general_libro.html" class="btn btn-primary">Ver libro</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/metro.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
-                            <p class="card-text">Es probablemente el tercer mejor libro de la historia</p>
-                            <a href="pagina_general_libro.html" class="btn btn-primary">Ver libro</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 mt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="../img/Holly_stephen_king.jpg" alt="Card image">
-                        <div class="card-body">
-                            <h5 class="card-title">John Doe</h5>
-                            <p class="card-text">Es probablemente el cuarto mejor libro de la historia</p>
-                            <a href="pagina_general_libro.html" class="btn btn-primary">Ver libro</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Pie de página -->
-    <footer class="pie text-center mt-4">
-    <div class="container">
-        <p>&copy; 2024 Todos los derechos reservados.</p>
-        <p>Hecho con <span class="text-danger">&hearts;</span> por Entre Verbos</p>
-    </div>
-    </footer>
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64 foot">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
+    <p>Hecho por <a href="index.html" title="Regresar al inicio" target="_blank" class="w3-hover-text-green">Entre
+        Verbos</a></p>
+  </footer>
 
 
 </body>
+
 </html>
