@@ -49,7 +49,6 @@
 <body class="w3-light-grey">
 
     <!-- Top container -->
-    
     <div class="w3-bar w3-black w3-large" style="z-index:4;">
         <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"
             onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
@@ -80,13 +79,13 @@
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
             <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-user fa-fw"></i>  Crear
                 Cuenta</a>
-            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i class="fa fa-solid fa-book fa-fw"></i>  Agregar
+            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-book fa-fw"></i>  Agregar
                 Producto</a>
             <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-pen-nib fa-fw"></i>   Modificar
                 Producto</a>
             <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-eraser fa-fw"></i> 
                 Eliminar Producto</a>
-            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
+            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
                 Producto</a>
         </div>
     </nav>
@@ -101,38 +100,29 @@
         <div class="col-sm"></div>
         <div class="col-sm" style="padding-top: 70px;">
             <div class="container p-5 rounded" id="second-navbar-content">
-                <form id="agregar_pro_form">
+                <form id="buscar_pro_form">
                     <div class="w3-center">
-                    <h2>Agregar Libro</h2>
-                </div>
+                        <h2>Buscar Libro</h2>
+                    </div>
                     <div class="mb-3 mt-3">
-                      <label for="nombre_libr" class="form-label">Nombre del libro</label>
-                      <input type="text" class="form-control" id="nombre_libr" placeholder="Escriba el Nombre del Libro" required>
+                      <label for="nombre_libr" class="form-label">Buscar por Nombre</label>
+                      <input type="text" class="form-control" id="nombre_libr" placeholder="Ingrese Nombre" required>
                         <div id="nombre_libro_ingre_error" class="error-message"></div>
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="isbn" class="form-label">ISBN</label>
-                        <input type="text" class="form-control" id="isbn" placeholder="Introducir ISBN" required>
-                        <div id="nombre_isbn_error_1" class="error-message"></div>
-                      </div>
-                      <div class="mb-3 mt-3">
-                        <label for="confirm_isbn" class="form-label">Confirmar ISBN</label>
-                        <input type="text" class="form-control" id="confirm_isbn" placeholder="Introducir ISBN" required>
-                            <div id="nombre_isbn_error" class="error-message"></div>
-                      </div>
-                      <div class="mb-3 mt-3">
-                        <label for="valor_libr" class="form-label">Valor del libro</label>
-                        <input type="text" class="form-control" id="valor_libr" placeholder="Agregar valor" required>
-                            <div id="valor_libro_error" class="error-message"></div>
+                        <label for="buscar_isbn" class="form-label">Buscar por ISBN</label>
+                        <input type="text" class="form-control" id="buscar_isbn" placeholder="Introducir ISBN" required>
+                        <div id="nombre_isbn_error" class="error-message"></div>
                       </div>
                     <div class="mb-3">
-                        <label for="comment">Agregar descripción</label>
-                        <textarea class="form-control" rows="5" id="descrip" required></textarea> 
-                            <div id="descrip_error_libr" class="error-message"></div>
+                        <label for="comment">Detalles del Libro</label>
+                        <textarea class="form-control" rows="5" id="detall_libr" required></textarea>
+                        <div id="descrip_error_libr" class="error-message"></div>
                     </div>
+         
                     <div class="w3-center">
-                    <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Agregar Libro</button>
-                </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Buscar</button>
+                    </div>
                   </form>
             </div>
 
