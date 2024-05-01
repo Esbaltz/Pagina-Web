@@ -40,8 +40,20 @@
         }
 
         #second-navbar-content {
-            background-color: #c7b8b9;
+            background-color: #7f8c8d;
             color: black;
+        }
+        .btn{
+            background-color: #34495e;
+            transition: 0.3s;
+            color: #fff;
+        }
+        .btn:hover{
+            background-color: #000;
+            color: #fff;
+        }
+        .f-c{
+            background-color:#e5e5e5
         }
     </style>
 </head>
@@ -52,7 +64,7 @@
     <div class="w3-bar w3-black w3-large" style="z-index:4;">
         <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey"
             onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
-        <a href="../Web/paginas/index.html" class="w3-bar-item w3-right">ENTRE VERBOS</a>
+        <a href="../paginas/index.html" class="w3-bar-item w3-right">ENTRE VERBOS</a>
 
     </div>
 
@@ -60,7 +72,7 @@
     <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
         <div class="w3-container w3-row">
             <div class="w3-col m2 text-center" style="margin-right: 43px;">
-                <img class="w3-circle" src="../Web/img/inspirado.jpeg" style="width:76px;height:76px">
+                <img class="w3-circle" src="../img/inspirado.jpeg" style="width:76px;height:76px">
             </div>
             <div class="w3-col s8 w3-bar">
                 <span>Welcome, <strong>ADMIN</strong></span><br>
@@ -88,6 +100,13 @@
             <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
                 Producto</a>
         </div>
+        <div class="w3-container w3-center mt-3">
+            <h5><strong>Gestión de usuarios</strong></h5>
+        </div>
+        <div class="w3-bar-block">
+            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
+            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i>  Ver usuarios</a>
+        </div>
     </nav>
 
 
@@ -100,27 +119,27 @@
         <div class="col-sm"></div>
         <div class="col-sm" style="padding-top: 70px;">
             <div class="container p-5 rounded" id="second-navbar-content">
-                <form id="crear_cuenta_Form">
+                <form id="crear_cuenta_Form" style="color: #ffffff;">
                     <div class="w3-center">
                     <h2>Crear Cuenta</h2>
                 </div>
                     <div class="mb-3 mt-3">
                       <label for="nombreCuenta" class="form-label">Nombre de la Cuenta</label>
-                      <input type="text" class="form-control" id="nombreCuenta" placeholder="Ingrese Nombre" required>
+                      <input type="text" class="form-control f-c" id="nombreCuenta" placeholder="Ingrese Nombre" required>
                       <div id="nombre_libro_ingre_error" class="error-message"></div>
                     </div>
                     <div class="mb-3">
                       <label for="password_1" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control" id="password_1" placeholder="Introducir Contraseña" required>
+                      <input type="password" class="form-control f-c" id="password_1" placeholder="Introducir Contraseña" required>
                       <div id="passwordError" class="error-message"></div>
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+                        <input type="password" class="form-control f-c" id="confirmPassword" placeholder="Confirmar Contraseña" required>
                         <div id="passwordError_confirm" class="error-message"></div>
                       </div>
                       <div class="w3-center">
-                    <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Crear Cuenta</button>
+                    <button type="submit" class="btn" style="margin-top: 25px;">Crear Cuenta</button>
                 </div>
                   </form>
             </div>
