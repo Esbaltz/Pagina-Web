@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>W3.CSS Template</title>
+    <title>Buscar Producto</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -40,13 +40,13 @@
         }
 
         #second-navbar-content {
-            background-color: #7f8c8d;
+            background-color:  #333333;
             color: black;
         }
         .btn{
-            background-color: #34495e;
+            background-color: #dddddd;
             transition: 0.3s;
-            color: #fff;
+            color: #000;
         }
         .btn:hover{
             background-color: #000;
@@ -54,6 +54,10 @@
         }
         .f-c{
             background-color:#e5e5e5
+        }
+        .error-message {
+            color: #ffae42;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -134,7 +138,7 @@
                         <div id="nombre_isbn_error" class="error-message"></div>
                       </div>
                     <div class="mb-3">
-                        <label for="comment">Detalles del Libro</label>
+                        <label for="descrip">Detalles del Libro</label>
                         <textarea class="form-control f-c" rows="5" id="detall_libr" required style="resize: none;"></textarea>
                         <div id="descrip_error_libr" class="error-message"></div>
                     </div>
@@ -181,6 +185,35 @@
             mySidebar.style.display = "none";
             overlayBg.style.display = "none";
         }
+
+        document.getElementById("buscar_pro_form").addEventListener("submit", function(event){
+            var nombre_libr =document.getElementById("nombre_libr").value;
+            var isbn =document.getElementById("buscar_isbn").value;
+            var descrip =document.getElementById("detall_libr").value;
+
+            var nombre_libro_ingre_error =document.getElementById("nombre_libro_ingre_error");
+            var nombre_isbn_error =document.getElementById("nombre_isbn_error");
+            var descrip_error_libr =document.getElementById("descrip_error_libr");
+
+            nombre_libro_ingre_error.innerHTML = "";
+            nombre_isbn_error.innerHTML = "";
+            descrip_error_libr.innerHTML = "";
+
+            if(nombre_libr.length < 3 ||  nombre_libr.length >60){
+                nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
+                event.preventDefault();
+            }
+            
+            if(isbn.length !== 13){
+                nombre_isbn_error.innerHTML = "Los datos de ISBN son de 13 carácteres.";
+                event.preventDefault();
+            }
+
+            if(descrip.length <10 || descrip.length >600){
+                descrip_error_libr.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 10 caracteres o un maximo de 600.";
+                event.preventDefault(); 
+            }
+    });
 
     </script>
 
