@@ -40,21 +40,25 @@
         }
 
         #second-navbar-content {
-            background-color:  #333333;
+            background-color: #333333;
             color: black;
         }
-        .btn{
+
+        .btn {
             background-color: #dddddd;
             transition: 0.3s;
             color: #000;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: #000;
             color: #fff;
         }
-        .f-c{
-            background-color:#e5e5e5
+
+        .f-c {
+            background-color: #e5e5e5
         }
+
         .error-message {
             color: #ffae42;
             font-size: 12px;
@@ -93,23 +97,30 @@
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-user fa-fw"></i>  Crear
+            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-user fa-fw"></i> 
+                Crear
                 Cuenta</a>
-            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-book fa-fw"></i>  Agregar
+            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-solid fa-book fa-fw"></i>  Agregar
                 Producto</a>
-            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-pen-nib fa-fw"></i>   Modificar
+            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-pen-nib fa-fw"></i>   Modificar
                 Producto</a>
-            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i class="fa fa-solid fa-eraser fa-fw"></i> 
+            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i
+                    class="fa fa-solid fa-eraser fa-fw"></i> 
                 Eliminar Producto</a>
-            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
+            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fas fa-search fa-fw"></i>  Buscar
                 Producto</a>
         </div>
         <div class="w3-container w3-center mt-3">
             <h5><strong>Gestión de usuarios</strong></h5>
         </div>
         <div class="w3-bar-block">
-            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
-            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i>  Ver usuarios</a>
+            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
+            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i> 
+                Ver usuarios</a>
         </div>
     </nav>
 
@@ -128,25 +139,20 @@
                         <h2>Eliminar Producto</h2>
                     </div>
                     <div class="mb-3 mt-3">
-                      <label for="isbn" class="form-label">ISBN del Producto</label>
-                      <input type="text" class="form-control f-c" id="isbn" placeholder="Ingrese ISBN" required>
-                      <div id="nombre_isbn_error_1" class="error-message"></div>
+                        <label for="isbn" class="form-label">ISBN del Producto</label>
+                        <input type="text" class="form-control f-c" id="isbn" placeholder="Ingrese ISBN" required>
+                        <div id="nombre_isbn_error_1" class="error-message"></div>
                     </div>
                     <div class="w3-center">
                         <button type="submit" class="btn" style="margin-top: 25px;">Eliminar Producto</button>
                     </div>
-                  </form>
+                </form>
             </div>
 
         </div>
         <div class="col-sm"></div>
 
     </div>
-
-
-
-
-
 
     <!-- End page content -->
     </div>
@@ -175,14 +181,14 @@
             overlayBg.style.display = "none";
         }
 
-        document.getElementById("agregar_pro_form").addEventListener("submit", function(event){
-            var isbn =document.getElementById("isbn").value;
+        document.getElementById("agregar_pro_form").addEventListener("submit", function (event) {
+            var isbn = document.getElementById("isbn").value;
 
-            var nombre_isbn_error_1 =document.getElementById("nombre_isbn_error_1");
+            var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
 
             nombre_isbn_error_1.innerHTML = "";
 
-            if(isbn.length !== 13){
+            if (isbn.length !== 13) {
                 nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
                 event.preventDefault();
             }

@@ -40,21 +40,25 @@
         }
 
         #second-navbar-content {
-            background-color:  #333333;
+            background-color: #333333;
             color: black;
         }
-        .btn{
+
+        .btn {
             background-color: #dddddd;
             transition: 0.3s;
             color: #000;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: #000;
             color: #fff;
         }
-        .f-c{
-            background-color:#e5e5e5
+
+        .f-c {
+            background-color: #e5e5e5
         }
+
         .error-message {
             color: #ffae42;
             font-size: 12px;
@@ -93,23 +97,30 @@
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i class="fa fa-user fa-fw"></i>  Crear
+            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i
+                    class="fa fa-user fa-fw"></i>  Crear
                 Cuenta</a>
-            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-book fa-fw"></i>  Agregar
+            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-solid fa-book fa-fw"></i>  Agregar
                 Producto</a>
-            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-pen-nib fa-fw"></i>   Modificar
+            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-pen-nib fa-fw"></i>   Modificar
                 Producto</a>
-            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-eraser fa-fw"></i> 
+            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-solid fa-eraser fa-fw"></i> 
                 Eliminar Producto</a>
-            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
+            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fas fa-search fa-fw"></i>  Buscar
                 Producto</a>
         </div>
         <div class="w3-container w3-center mt-3">
             <h5><strong>Gestión de usuarios</strong></h5>
         </div>
         <div class="w3-bar-block">
-            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
-            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i>  Ver usuarios</a>
+            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
+            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i> 
+                Ver usuarios</a>
         </div>
     </nav>
 
@@ -125,38 +136,36 @@
             <div class="container p-5 rounded" id="second-navbar-content">
                 <form id="crear_cuenta_Form" style="color: #ffffff;">
                     <div class="w3-center">
-                    <h2>Crear Cuenta</h2>
-                </div>
+                        <h2>Crear Cuenta</h2>
+                    </div>
                     <div class="mb-3 mt-3">
-                      <label for="nombreCuenta" class="form-label">Nombre de la Cuenta</label>
-                      <input type="text" class="form-control f-c" id="nombreCuenta" placeholder="Ingrese Nombre" required>
-                      <div id="nombre_libro_ingre_error" class="error-message"></div>
+                        <label for="nombreCuenta" class="form-label">Nombre de la Cuenta</label>
+                        <input type="text" class="form-control f-c" id="nombreCuenta" placeholder="Ingrese Nombre"
+                            required>
+                        <div id="nombre_libro_ingre_error" class="error-message"></div>
                     </div>
                     <div class="mb-3">
-                      <label for="password_1" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control f-c" id="password_1" placeholder="Introducir Contraseña" required>
-                      <div id="passwordError" class="error-message"></div>
+                        <label for="password_1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control f-c" id="password_1"
+                            placeholder="Introducir Contraseña" required>
+                        <div id="passwordError" class="error-message"></div>
                     </div>
                     <div class="mb-3">
                         <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" class="form-control f-c" id="confirmPassword" placeholder="Confirmar Contraseña" required>
+                        <input type="password" class="form-control f-c" id="confirmPassword"
+                            placeholder="Confirmar Contraseña" required>
                         <div id="passwordError_confirm" class="error-message"></div>
-                      </div>
-                      <div class="w3-center">
-                    <button type="submit" class="btn" style="margin-top: 25px;">Crear Cuenta</button>
-                </div>
-                  </form>
+                    </div>
+                    <div class="w3-center">
+                        <button type="submit" class="btn" style="margin-top: 25px;">Crear Cuenta</button>
+                    </div>
+                </form>
             </div>
 
         </div>
         <div class="col-sm"></div>
 
     </div>
-
-
-
-
-
 
     <!-- End page content -->
     </div>

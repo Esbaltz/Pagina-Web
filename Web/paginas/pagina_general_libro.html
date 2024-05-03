@@ -33,32 +33,39 @@
       transition: 0.3s;
     }
 
-    .img-move{
-            display: block;
-        }
-        .img-move img{
-            transition: 0.3s;
-        }
-        .img-move:hover img{
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-        .efect{
-            transition: 0.3s;
-        }
-        .efect:hover{
-            transform: scale(1.05);
-            letter-spacing: 5px;
-        }
-        .l-efect a{
-            transition: 0.5s;
-        }
-        .foot a{
-            transition: 0.3s;
-        }
-        .cat{
-            transition: 0.3s;
-        }
+    .img-move {
+      display: block;
+    }
+
+    .img-move img {
+      transition: 0.3s;
+    }
+
+    .img-move:hover img {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+
+    .efect {
+      transition: 0.3s;
+    }
+
+    .efect:hover {
+      transform: scale(1.05);
+      letter-spacing: 5px;
+    }
+
+    .l-efect a {
+      transition: 0.5s;
+    }
+
+    .foot a {
+      transition: 0.3s;
+    }
+
+    .cat {
+      transition: 0.3s;
+    }
   </style>
 </head>
 
@@ -71,10 +78,11 @@
       <!-- Right-sided navbar links -->
       <div class="w3-right w3-hide-small l-efect">
         <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
-        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Tienda</a>
-        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Carrito</a>
-        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Iniciar Sesión</a>
-        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
+        <a href="tienda.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Tienda</a>
+        <a href="pagina_carrito_general.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> Carrito</a>
+        <a href="paginas_inicio_secion/Inicio_secion.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i>
+          Iniciar Sesión</a>
+        <a href="usuario/user.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
@@ -90,11 +98,12 @@
     style="display:none" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
       ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">Carrito</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">Iniciar Sesión</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Usuario</a>
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+    <a href="tienda.html" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
+    <a href="pagina_carrito_general.html" onclick="w3_close()" class="w3-bar-item w3-button">Carrito</a>
+    <a href="paginas_inicio_secion/Inicio_secion.html" onclick="w3_close()" class="w3-bar-item w3-button">Iniciar
+      Sesión</a>
+    <a href="usuario/user.html" onclick="w3_close()" class="w3-bar-item w3-button">Usuario</a>
   </nav>
 
   <!-- Page content -->
@@ -107,7 +116,7 @@
           height="750">
       </div>
 
-      <div class="w3-col m6 w3-padding-large w3-padding-64">
+      <div class="w3-col m6 w3-padding-large w3-padding-16">
         <h1 class="w3-center">HOLLY</h1>
         <h3 class="w3-center">Stephen King</h3>
         <p class="w3-large">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nisi fugiat atque
@@ -127,42 +136,40 @@
     <h1 class="w3-center w3-large w3-black" style="margin-right: 10%; margin-left: 10%;">RELACIONADOS</h1>
   </div>
   <div class="w3-content" style="max-width:1200px">
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-center" id="food">
-    <div class="w3-quarter">
-      <a href="pagina_general_libro.html" class="img-move">
-        <img src="../img/Autonomous_libro.jpg" alt="Sandwich" style="width:100%">
-      </a>
-      <h3>Autonumus</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="pagina_general_libro.html" class="img-move">
-        <img src="../img/El_hobit.jpg" alt="Steak" style="width:100%">
-      </a>
-      <h3>El hobbit</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
-      </p>
-    </div>
-    <div class="w3-quarter">
-      <a href="pagina_general_libro.html" class="img-move">
-        <img src="../img/historia.webp" alt="Cherries" style="width:100%">
-      </a>
-      <h3>Holly</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <a href="pagina_general_libro.html" class="img-move">
-        <img src="../img/metro.jpg" alt="Pasta and Wine" style="width:100%">
-      </a>
-      <h3>Metro</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-center" id="food">
+      <div class="w3-quarter">
+        <a href="pagina_general_libro.html" class="img-move">
+          <img src="../img/Autonomous_libro.jpg" alt="Sandwich" style="width:100%">
+        </a>
+        <h3>Autonumus</h3>
+        <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      </div>
+      <div class="w3-quarter">
+        <a href="pagina_general_libro.html" class="img-move">
+          <img src="../img/El_hobit.jpg" alt="Steak" style="width:100%">
+        </a>
+        <h3>El hobbit</h3>
+        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+        </p>
+      </div>
+      <div class="w3-quarter">
+        <a href="pagina_general_libro.html" class="img-move">
+          <img src="../img/historia.webp" alt="Cherries" style="width:100%">
+        </a>
+        <h3>Holly</h3>
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <p>What else?</p>
+      </div>
+      <div class="w3-quarter">
+        <a href="pagina_general_libro.html" class="img-move">
+          <img src="../img/metro.jpg" alt="Pasta and Wine" style="width:100%">
+        </a>
+        <h3>Metro</h3>
+        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+      </div>
     </div>
   </div>
-  </div>
-
-
 
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 foot">
@@ -171,6 +178,32 @@
         Verbos</a></p>
   </footer>
 
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+    }
+  </script>
 
 </body>
 

@@ -17,6 +17,7 @@
             bottom: 0;
             padding-bottom: 50px;
         }
+
         .error-message {
             color: red;
             font-size: 12px;
@@ -67,13 +68,14 @@
 
                             <input type="text" class="form-control" id="nombreCuenta"
                                 placeholder="Ingrese nombre de la cuenta" required>
-                                <div id="nombreCuentaError" class="error-message"></div>
+                            <div id="nombreCuentaError" class="error-message"></div>
                         </div>
                         <div class="mb-3">
                             <i class="fa fa-key icon "></i>
                             <label for="password" class="form-label">Contraseña</label>
 
-                            <input type="password" class="form-control" id="password" placeholder="Ingrese contraseña" required>
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese contraseña"
+                                required>
                             <div id="passwordError" class="error-message"></div>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
@@ -96,7 +98,7 @@
     <div class="container admin">
         <a href="../../imenu-w/agregar_producto.html">Ingreso Admin</a>
     </div>
-    
+
     <script>
         document.getElementById("registroForm").addEventListener("submit", function (event) {
             var nombreCuenta = document.getElementById("nombreCuenta").value;
@@ -117,7 +119,7 @@
             }
         });
     </script>
-    
+
 </body>
 
 </html>
