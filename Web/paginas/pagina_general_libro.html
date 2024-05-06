@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <title>Páginas General libro</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro: Holly de Stephen King</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Raleway", sans-serif
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Raleway", sans-serif;
     }
 
-    body,
-    html {
+    body, html {
       height: 100%;
       line-height: 1.8;
     }
 
     .w3-bar .w3-button {
       padding: 16px;
-    }
-
-    .w3-button {
-      transition: 0.3s;
-    }
-
-    .img-move {
-      display: block;
     }
 
     .img-move img {
@@ -46,20 +29,12 @@
       transform: scale(1.05);
     }
 
-    .efect {
-      transition: 0.3s;
-    }
-
     .efect:hover {
       transform: scale(1.05);
       letter-spacing: 5px;
     }
 
-    .l-efect a {
-      transition: 0.5s;
-    }
-
-    .foot a {
+    .foot a, .l-efect a {
       transition: 0.3s;
     }
 
@@ -68,7 +43,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <!-- Navbar (sit on top) -->
@@ -85,7 +59,6 @@
         <a href="usuario/user.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
       </div>
       <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
       <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
         onclick="w3_open()">
         <i class="fa fa-bars"></i>
@@ -108,22 +81,17 @@
 
   <!-- Page content -->
   <div class="w3-content w3-padding-16" style="max-width:1000px">
-
     <!-- About Section -->
     <div class="w3-row w3-padding-64" id="about">
-      <div class="w3-col m6 w3-padding-large ">
-        <img src="../img/Holly_stephen_king.jpg" class="w3-round w3-image " alt="Table Setting" width="600"
-          height="750">
+      <div class="w3-col m6 w3-padding-large">
+        <img src="../img/Holly_stephen_king.jpg" class="w3-round w3-image img-move" alt="Table Setting" width="600">
       </div>
-
-      <div class="w3-col m6 w3-padding-large w3-padding-16">
+      <div class="w3-col m6 w3-padding-large">
         <h1 class="w3-center">HOLLY</h1>
         <h3 class="w3-center">Stephen King</h3>
-        <p class="w3-large">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nisi fugiat atque
-          blanditiis maiores eveniet vero similique, accusamus, labore animi recusandae quas deleniti cupiditate
-          temporibus modi placeat fugit minus saepe.</p>
+        <p class="w3-large" id="book-description">Cargando descripción...</p>
         <div class="w3-padding-64 w3-center">
-          <p><button class="w3-button w3-gray w3-hover-black">Agregar al carrito</button></p>
+          <button class="w3-button w3-gray w3-hover-black">Agregar al carrito</button>
         </div>
       </div>
     </div>
@@ -132,6 +100,7 @@
 
     <!-- End page content -->
   </div>
+
   <div class="w3-padding-16">
     <h1 class="w3-center w3-large w3-black" style="margin-right: 10%; margin-left: 10%;">RELACIONADOS</h1>
   </div>
@@ -173,38 +142,49 @@
 
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 foot">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
+    <a href="pagina_general_libro.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
     <p>Hecho por <a href="index.html" title="Regresar al inicio" target="_blank" class="w3-hover-text-green">Entre
         Verbos</a></p>
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-
-
     // Toggle between showing and hiding the sidebar when clicking the menu icon
-    var mySidebar = document.getElementById("mySidebar");
-
     function w3_open() {
-      if (mySidebar.style.display === 'block') {
-        mySidebar.style.display = 'none';
-      } else {
-        mySidebar.style.display = 'block';
-      }
+      var mySidebar = document.getElementById("mySidebar");
+      mySidebar.style.display = (mySidebar.style.display === 'block') ? 'none' : 'block';
     }
 
     // Close the sidebar with the close button
     function w3_close() {
-      mySidebar.style.display = "none";
+      var mySidebar = document.getElementById("mySidebar");
+      mySidebar.style.display = 'none';
     }
+
+    $(document).ready(function() {
+      // Realizar solicitud a la API de Google Books para obtener la descripción del libro "Holly" de Stephen King en español
+      $.getJSON('https://www.googleapis.com/books/v1/volumes?q=intitle:holly+inauthor:stephen+king&langRestrict=es', function(data) {
+        // Esta función se ejecuta cuando la solicitud a la API es exitosa
+        console.log('Datos recibidos:', data);
+        // Verificar si se encontraron resultados
+        if (data.totalItems > 0) {
+          // Obtener la descripción del primer libro de los resultados
+          var description = data.items[0].volumeInfo.description;
+          // Limitar la longitud de la descripción a 500 caracteres
+          var briefDescription = description.substring(0, 500);
+          // Mostrar la descripción en el elemento HTML correspondiente
+          $('#book-description').text(briefDescription + '...');
+        } else {
+          // Si no se encontraron resultados, mostrar un mensaje de error
+          $('#book-description').text('No se encontró la descripción breve del libro "Holly" de Stephen King en español.');
+        }
+      }).fail(function() {
+        // Esta función se ejecuta si hay un error al realizar la solicitud a la API
+        console.log('Error al consumir la API de Google Books!');
+        // Mostrar un mensaje de error
+        $('#book-description').text('Error al obtener la descripción breve del libro.');
+      });
+    });
   </script>
-
 </body>
-
 </html>
