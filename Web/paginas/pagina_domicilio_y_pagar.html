@@ -154,15 +154,15 @@
 
             if (domicilio.length < 3 || domicilio.length > 30) {
                 direccionError.innerHTML = "La dirección debe tener entre 3 y 30 caracteres.";
-
+                event.preventDefault();
             }
             if (casa.length < 1 || casa.length > 10 || isNaN(casa)) {
                 casaError.innerHTML = "Ingrese un número de casa válido.";
-
+                event.preventDefault();
             }
             if (region === "") {
                 regionError.innerHTML = "Seleccione una región.";
-
+                event.preventDefault(); 
             }
         });
 
