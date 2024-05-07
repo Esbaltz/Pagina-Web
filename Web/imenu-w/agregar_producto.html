@@ -144,7 +144,7 @@
                       </div>
                       <div class="mb-3 mt-3">
                         <label for="valor_libr" class="form-label">Valor del libro</label>
-                        <input type="text" class="form-control f-c" id="valor_libr" placeholder="Agregar valor" required>
+                        <input type="number" class="form-control f-c" id="valor_libr" placeholder="Agregar valor" required>
                             <div id="valor_libro_error" class="error-message"></div>
                       </div>
                     <div class="mb-3">
@@ -222,8 +222,12 @@
                 nombre_isbn_error.innerHTML = "Los datos de ISBN no son iguales.";
                 event.preventDefault();
             }
-            if(valor_libr.length < 2 ||  valor_libr.length >7){
+            if((valor_libr.toString()).length < 2 ||  (valor_libr.toString()).length >7){
                 valor_libro_error.innerHTML = "El valor del libro ingresado tiene que tener un paramentro minimo de 3 cifras, un maximo de 7 o no puede ingresar el valor 0 en solo.";
+                event.preventDefault();
+            }
+            if(valor_libr<1){
+                valor_libro_error.innerHTML = "xd";
                 event.preventDefault();
             }
             if(descrip.length <10 || descrip.length >600){
