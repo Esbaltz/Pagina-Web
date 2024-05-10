@@ -156,12 +156,7 @@
                         <div id="valor_libro_error" class="error-message"></div>
 
                     </div>
-                    <div class="mb-3">
-                        <label for="comment">Agregar descripción</label>
-                        <textarea class="form-control f-c" rows="5" id="descrip" required
-                            style="resize: none;"></textarea>
-                        <div id="descrip_error_libr" class="error-message"></div>
-                    </div>
+                    
 
                     <div class="w3-center">
                         <button type="submit" class="btn" style="margin-top: 25px;">Modificar</button>
@@ -205,17 +200,14 @@
             var nombre_libr = document.getElementById("nombre_libr").value;
             var isbn = document.getElementById("isbn").value;
             var valor_libr = document.getElementById("valor_libr").value;
-            var descrip = document.getElementById("descrip").value;
 
             var nombre_libro_ingre_error = document.getElementById("nombre_libro_ingre_error");
             var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
             var valor_libro_error = document.getElementById("valor_libro_error");
-            var descrip_error_libr = document.getElementById("descrip_error_libr");
 
             nombre_libro_ingre_error.innerHTML = "";
             nombre_isbn_error_1.innerHTML = "";
             valor_libro_error.innerHTML = "";
-            descrip_error_libr.innerHTML = "";
 
             if (nombre_libr.length < 3 || nombre_libr.length > 60) {
                 nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
@@ -228,10 +220,6 @@
 
             if (valor_libr.length < 2 || valor_libr.length > 7) {
                 valor_libro_error.innerHTML = "El valor del libro ingresado tiene que tener un paramentro minimo de 3 cifras, un maximo de 7 o no puede ingresar el valor 0 en solo.";
-                event.preventDefault();
-            }
-            if (descrip.length < 10 || descrip.length > 600) {
-                descrip_error_libr.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 10 caracteres o un maximo de 600.";
                 event.preventDefault();
             }
         });
