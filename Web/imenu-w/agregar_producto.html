@@ -151,6 +151,16 @@
                         <label for="comment">Agregar descripción</label>
                         <textarea class="form-control f-c" rows="5" id="descrip" required style="resize: none;"></textarea> 
                             <div id="descrip_error_libr" class="error-message"></div>
+                            <div class="w3-container">
+                                <!-- contenido para adjuntar imagen -->
+                                <h2>Adjuntar Imagen</h2>
+                                <form action="/ruta/del/procesamiento" method="post" enctype="multipart/form-data" class="w3-container">
+                                  <label class="w3-text-blue"><b>Selecciona una imagen (.jpg):</b></label>
+                                  <input class="w3-input w3-border" type="file" name="imagen" accept=".jpg">
+                                  <br>
+                                  <button class="w3-button w3-blue">Subir Imagen</button>
+                                </form>
+                              </div>
                     </div>
                     <div class="w3-center">
                     <button type="submit" class="btn" style="margin-top: 25px;">Agregar Libro</button>
