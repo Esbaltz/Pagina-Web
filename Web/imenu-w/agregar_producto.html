@@ -170,6 +170,7 @@
 
                             <label class="w3-text-blue"><b>Selecciona una imagen (.jpg):</b></label>
                             <input class="w3-input w3-border" type="file" name="imagen" accept=".jpg">
+                            <div id="imagen_error" class="error-message"></div>
                             <br>
                             <div class="w3-center">
                                 <button type="submit" class="btn" style="margin-top: 25px;">Agregar Libro</button>
@@ -218,16 +219,19 @@
             var isbn = document.getElementById("isbn").value;
             var confirm_isbn = document.getElementById("confirm_isbn").value;
             var valor_libr = document.getElementById("valor_libr").value;
+            var imagen = document.querySelector('input[type="file"]').files[0];
 
             var nombre_libro_ingre_error = document.getElementById("nombre_libro_ingre_error");
             var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
             var nombre_isbn_error = document.getElementById("nombre_isbn_error");
             var valor_libro_error = document.getElementById("valor_libro_error");
+            var imagen_error = document.getElementById("imagen_error");
 
             nombre_libro_ingre_error.innerHTML = "";
             nombre_isbn_error_1.innerHTML = "";
             nombre_isbn_error.innerHTML = "";
             valor_libro_error.innerHTML = "";
+            imagen_error.innerHTML = "";
 
             if (nombre_libr.length < 3 || nombre_libr.length > 60) {
                 nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
@@ -249,6 +253,17 @@
             if (valor_libr < 1) {
                 valor_libro_error.innerHTML = "xd";
                 event.preventDefault();
+            }
+
+            if (!imagen) {
+                imagen_error.innerHTML = "Por favor, seleccione una imagen.";
+                event.preventDefault();
+            } else {
+                var extension = imagen.name.split('.').pop().toLowerCase();
+                if (extension !== "jpg") {
+                    imagen_error.innerHTML = "Por favor, seleccione un archivo JPG.";
+                    event.preventDefault();
+                }
             }
         });
     </script>
