@@ -194,36 +194,12 @@
             overlayBg.style.display = "none";
         }
 
-        document.getElementById("crear_cuenta_Form").addEventListener("submit", function (event) {
-            var nombreCuenta = document.getElementById("nombreCuenta").value;
-            var password_1 = document.getElementById("password_1").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
-
-
-            var nombreCuentaError = document.getElementById("nombre_libro_ingre_error");
-            var passwordError = document.getElementById("passwordError");
-            var passwordError_confirm = document.getElementById("passwordError_confirm");
-
-            nombreCuentaError.innerHTML = "";
-            passwordError.innerHTML = "";
-            passwordError_confirm.innerHTML = "";
-
-            if (nombreCuenta.length < 3 || nombreCuenta.length > 30) {
-                nombreCuentaError.innerHTML = "El nombre de cuenta debe tener entre 3 y 30 caracteres.";
-                event.preventDefault();
-            }
-
-            if (password_1.length < 3 || password_1.length > 30) {
-                passwordError.innerHTML = "La contraseña debe tener entre 3 y 30 caracteres.";
-                event.preventDefault();
-            }
-
-            if (password_1 !== confirmPassword) {
-                passwordError_confirm.innerHTML = "Las contraseñas no coinciden.";
-                event.preventDefault();
-            }
-        });
-
+    </script>
+    <script src="../js/form.js"></script>
+    <script>
+        window.onload = function() {
+            crear_c();
+        };
     </script>
 
 </body>

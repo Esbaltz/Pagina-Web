@@ -123,24 +123,24 @@
         <div class="col-sm"></div>
         <div class="col-sm" style="padding-top: 70px;">
             <div class="container p-5 rounded" id="second-navbar-content">
-                <form id="buscar_pro_form" style="color: #ffffff;">
+                <form class="buscar_pro_form" style="color: #ffffff;">
                     <div class="w3-center">
                         <h2>Buscar Libro</h2>
                     </div>
                     <div class="mb-3 mt-3">
-                      <label for="nombre_libr" class="form-label">Buscar por Nombre</label>
-                      <input type="text" class="form-control f-c" id="nombre_libr" placeholder="Ingrese Nombre" required>
-                        <div id="nombre_libro_ingre_error" class="error-message"></div>
+                      <label for="nombre_libr1" class="form-label">Buscar por Nombre</label>
+                      <input type="text" class="form-control f-c" id="nombre_libr1" placeholder="Ingrese Nombre" required>
+                        <div id="nombre_libro_ingre_error1" class="error-message"></div>
                     </div>
                     <div class="mb-3 mt-3">
-                        <label for="buscar_isbn" class="form-label">Buscar por ISBN</label>
-                        <input type="text" class="form-control f-c" id="buscar_isbn" placeholder="Introducir ISBN" required>
-                        <div id="nombre_isbn_error" class="error-message"></div>
+                        <label for="buscar_isbn1" class="form-label">Buscar por ISBN</label>
+                        <input type="text" class="form-control f-c" id="buscar_isbn1" placeholder="Introducir ISBN" required>
+                        <div id="nombre_isbn_error1" class="error-message"></div>
                       </div>
                     <div class="mb-3">
-                        <label for="descrip">Detalles del Libro</label>
-                        <textarea class="form-control f-c" rows="5" id="detall_libr" required style="resize: none;" type="text"></textarea>
-                        <div id="descrip_error_libr" class="error-message"></div>
+                        <label for="descrip1">Detalles del Libro</label>
+                        <textarea class="form-control f-c" rows="5" id="detall_libr1" required style="resize: none;" type="text"></textarea>
+                        <div id="descrip_error_libr1" class="error-message"></div>
                     </div>
          
                     <div class="w3-center">
@@ -180,36 +180,13 @@
             mySidebar.style.display = "none";
             overlayBg.style.display = "none";
         }
+    </script>
 
-        document.getElementById("buscar_pro_form").addEventListener("submit", function(event){
-            var nombre_libr =document.getElementById("nombre_libr").value;
-            var isbn =document.getElementById("buscar_isbn").value;
-            var descrip =document.getElementById("detall_libr").value;
-
-            var nombre_libro_ingre_error =document.getElementById("nombre_libro_ingre_error");
-            var nombre_isbn_error =document.getElementById("nombre_isbn_error");
-            var descrip_error_libr =document.getElementById("descrip_error_libr");
-
-            nombre_libro_ingre_error.innerHTML = "";
-            nombre_isbn_error.innerHTML = "";
-            descrip_error_libr.innerHTML = "";
-
-            if(nombre_libr.length < 3 ||  nombre_libr.length >60){
-                nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
-                event.preventDefault();
-            }
-            
-            if(isbn.length !== 13){
-                nombre_isbn_error.innerHTML = "Los datos de ISBN son de 13 carácteres.";
-                event.preventDefault();
-            }
-
-            if(descrip.length <10 || descrip.length >600){
-                descrip_error_libr.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 10 caracteres o un maximo de 600.";
-                event.preventDefault(); 
-            }
-    });
-
+    <script src="../js/form.js"></script>
+    <script>
+        window.onload = function() {
+            form_buscar();
+        };
     </script>
 
 </body>

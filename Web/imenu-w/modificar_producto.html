@@ -196,34 +196,12 @@
             overlayBg.style.display = "none";
         }
 
-        document.getElementById("agregar_pro_form").addEventListener("submit", function (event) {
-            var nombre_libr = document.getElementById("nombre_libr").value;
-            var isbn = document.getElementById("isbn").value;
-            var valor_libr = document.getElementById("valor_libr").value;
-
-            var nombre_libro_ingre_error = document.getElementById("nombre_libro_ingre_error");
-            var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
-            var valor_libro_error = document.getElementById("valor_libro_error");
-
-            nombre_libro_ingre_error.innerHTML = "";
-            nombre_isbn_error_1.innerHTML = "";
-            valor_libro_error.innerHTML = "";
-
-            if (nombre_libr.length < 3 || nombre_libr.length > 60) {
-                nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
-                event.preventDefault();
-            }
-            if (isbn.length !== 13) {
-                nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
-                event.preventDefault();
-            }
-
-            if (valor_libr.length < 2 || valor_libr.length > 7) {
-                valor_libro_error.innerHTML = "El valor del libro ingresado tiene que tener un paramentro minimo de 3 cifras, un maximo de 7 o no puede ingresar el valor 0 en solo.";
-                event.preventDefault();
-            }
-        });
-
+    </script>
+    <script src="../js/form.js"></script>
+    <script>
+        window.onload = function() {
+            mod();
+        };
     </script>
 
 </body>

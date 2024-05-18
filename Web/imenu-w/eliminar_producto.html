@@ -181,20 +181,15 @@
             overlayBg.style.display = "none";
         }
 
-        document.getElementById("agregar_pro_form").addEventListener("submit", function (event) {
-            var isbn = document.getElementById("isbn").value;
-
-            var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
-
-            nombre_isbn_error_1.innerHTML = "";
-
-            if (isbn.length !== 13) {
-                nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
-                event.preventDefault();
-            }
-        });
-
     </script>
+
+<script src="../js/form.js"></script>
+<script>
+    window.onload = function() {
+        elim();
+    };
+</script>
+
 
 </body>
 

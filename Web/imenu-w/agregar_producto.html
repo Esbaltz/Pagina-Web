@@ -135,7 +135,7 @@
         <div class="col-sm"></div>
         <div class="col-sm" style="padding-top: 70px;">
             <div class="container p-5 rounded" id="second-navbar-content">
-                <form id="agregar_pro_form" style="color: #ffffff;">
+                <form class="agregar_pro_form" style="color: #ffffff;">
                     <div class="w3-center">
                         <h2>Agregar Libro</h2>
                     </div>
@@ -213,59 +213,13 @@
             mySidebar.style.display = "none";
             overlayBg.style.display = "none";
         }
+    </script>
 
-        document.getElementById("agregar_pro_form").addEventListener("submit", function (event) {
-            var nombre_libr = document.getElementById("nombre_libr").value;
-            var isbn = document.getElementById("isbn").value;
-            var confirm_isbn = document.getElementById("confirm_isbn").value;
-            var valor_libr = document.getElementById("valor_libr").value;
-            var imagen = document.querySelector('input[type="file"]').files[0];
-
-            var nombre_libro_ingre_error = document.getElementById("nombre_libro_ingre_error");
-            var nombre_isbn_error_1 = document.getElementById("nombre_isbn_error_1");
-            var nombre_isbn_error = document.getElementById("nombre_isbn_error");
-            var valor_libro_error = document.getElementById("valor_libro_error");
-            var imagen_error = document.getElementById("imagen_error");
-
-            nombre_libro_ingre_error.innerHTML = "";
-            nombre_isbn_error_1.innerHTML = "";
-            nombre_isbn_error.innerHTML = "";
-            valor_libro_error.innerHTML = "";
-            imagen_error.innerHTML = "";
-
-            if (nombre_libr.length < 3 || nombre_libr.length > 60) {
-                nombre_libro_ingre_error.innerHTML = "El nombre del libro ingresado tiene que tener un paramentro minimo de 3 caracteres o un maximo de 60.";
-                event.preventDefault();
-            }
-            if (isbn.length !== 13) {
-                nombre_isbn_error_1.innerHTML = "Los datos de ISBN no tiene el largo de 13 caracteres.";
-                event.preventDefault();
-            }
-
-            if (isbn !== confirm_isbn) {
-                nombre_isbn_error.innerHTML = "Los datos de ISBN no son iguales.";
-                event.preventDefault();
-            }
-            if ((valor_libr.toString()).length < 2 || (valor_libr.toString()).length > 7) {
-                valor_libro_error.innerHTML = "El valor del libro ingresado tiene que tener un paramentro minimo de 3 cifras, un maximo de 7 o no puede ingresar el valor 0 en solo.";
-                event.preventDefault();
-            }
-            if (valor_libr < 1) {
-                valor_libro_error.innerHTML = "xd";
-                event.preventDefault();
-            }
-
-            if (!imagen) {
-                imagen_error.innerHTML = "Por favor, seleccione una imagen.";
-                event.preventDefault();
-            } else {
-                var extension = imagen.name.split('.').pop().toLowerCase();
-                if (extension !== "jpg") {
-                    imagen_error.innerHTML = "Por favor, seleccione un archivo JPG.";
-                    event.preventDefault();
-                }
-            }
-        });
+    <script src="../js/form.js"></script>
+    <script>
+        window.onload = function() {
+            form1();
+        };
     </script>
 
 </body>
