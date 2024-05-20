@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../css/libs.css">
 </head>
+
 <body>
 
   <!-- Navbar (sit on top) -->
@@ -109,7 +111,8 @@
 
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 foot">
-    <a href="pagina_general_libro.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
+    <a href="pagina_general_libro.html" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al
+      inicio</a>
     <p>Hecho por <a href="index.html" title="Regresar al inicio" target="_blank" class="w3-hover-text-green">Entre
         Verbos</a></p>
   </footer>
@@ -117,9 +120,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       // Realizar solicitud a la API de Google Books para obtener la descripción del libro "Holly" de Stephen King en español
-      $.getJSON('https://www.googleapis.com/books/v1/volumes?q=intitle:holly+inauthor:stephen+king&langRestrict=es', function(data) {
+      $.getJSON('https://www.googleapis.com/books/v1/volumes?q=intitle:holly+inauthor:stephen+king&langRestrict=es', function (data) {
         // Esta función se ejecuta cuando la solicitud a la API es exitosa
         console.log('Datos recibidos:', data);
         // Verificar si se encontraron resultados
@@ -134,7 +137,7 @@
           // Si no se encontraron resultados, mostrar un mensaje de error
           $('#book-description').text('No se encontró la descripción breve del libro "Holly" de Stephen King en español.');
         }
-      }).fail(function() {
+      }).fail(function () {
         // Esta función se ejecuta si hay un error al realizar la solicitud a la API
         console.log('Error al consumir la API de Google Books!');
         // Mostrar un mensaje de error
@@ -144,4 +147,5 @@
   </script>
   <script src="../js/menus.js"></script>
 </body>
+
 </html>

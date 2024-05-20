@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Buscar Producto</title>
     <meta charset="UTF-8">
@@ -10,56 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <style>
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "Raleway", sans-serif;
-        }
-
-        .tr {
-            transition: 0.2s;
-        }
-
-        .per-border {
-            border-radius: 10px;
-            border: 10px solid rgb(255, 0, 0);
-        }
-
-        #second-navbar {
-            background-color: #dc3545 !important;
-        }
-
-        #second-navbar .nav-link {
-            color: white !important;
-        }
-
-        #second-navbar-content {
-            background-color:  #333333;
-            color: black;
-        }
-        .btn{
-            background-color: #dddddd;
-            transition: 0.3s;
-            color: #000;
-        }
-        .btn:hover{
-            background-color: #000;
-            color: #fff;
-        }
-        .f-c{
-            background-color:#e5e5e5
-        }
-        .error-message {
-            color: #ffae42;
-            font-size: 12px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/libs.css">
 </head>
 
 <body class="w3-light-grey">
@@ -93,23 +43,30 @@
         <div class="w3-bar-block">
             <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
                 onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-user fa-fw"></i>  Crear
+            <a href="crear_cuenta.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-user fa-fw"></i> 
+                Crear
                 Cuenta</a>
-            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-book fa-fw"></i>  Agregar
+            <a href="agregar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-solid fa-book fa-fw"></i>  Agregar
                 Producto</a>
-            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-pen-nib fa-fw"></i>   Modificar
+            <a href="modificar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-pen-nib fa-fw"></i>   Modificar
                 Producto</a>
-            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fa-solid fa-eraser fa-fw"></i> 
+            <a href="eliminar_producto.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fa-solid fa-eraser fa-fw"></i> 
                 Eliminar Producto</a>
-            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i class="fa fas fa-search fa-fw"></i>  Buscar
+            <a href="buscar_producto.html" class="w3-bar-item w3-button w3-padding w3-blue tr"><i
+                    class="fa fas fa-search fa-fw"></i>  Buscar
                 Producto</a>
         </div>
         <div class="w3-container w3-center mt-3">
             <h5><strong>Gestión de usuarios</strong></h5>
         </div>
         <div class="w3-bar-block">
-            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
-            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i>  Ver usuarios</a>
+            <a href="pedidos.html" class="w3-bar-item w3-button w3-padding tr"><i
+                    class="fa fas fa-people-carry fa-fw"></i>  Ver pedidos</a>
+            <a href="usuarios.html" class="w3-bar-item w3-button w3-padding tr"><i class="fa fas fa-users fa-fw"></i> 
+                Ver usuarios</a>
         </div>
     </nav>
 
@@ -128,25 +85,28 @@
                         <h2>Buscar Libro</h2>
                     </div>
                     <div class="mb-3 mt-3">
-                      <label for="nombre_libr1" class="form-label">Buscar por Nombre</label>
-                      <input type="text" class="form-control f-c" id="nombre_libr1" placeholder="Ingrese Nombre" required>
+                        <label for="nombre_libr1" class="form-label">Buscar por Nombre</label>
+                        <input type="text" class="form-control f-c" id="nombre_libr1" placeholder="Ingrese Nombre"
+                            required>
                         <div id="nombre_libro_ingre_error1" class="error-message"></div>
                     </div>
                     <div class="mb-3 mt-3">
                         <label for="buscar_isbn1" class="form-label">Buscar por ISBN</label>
-                        <input type="text" class="form-control f-c" id="buscar_isbn1" placeholder="Introducir ISBN" required>
+                        <input type="text" class="form-control f-c" id="buscar_isbn1" placeholder="Introducir ISBN"
+                            required>
                         <div id="nombre_isbn_error1" class="error-message"></div>
-                      </div>
+                    </div>
                     <div class="mb-3">
                         <label for="descrip1">Detalles del Libro</label>
-                        <textarea class="form-control f-c" rows="5" id="detall_libr1" required style="resize: none;" type="text"></textarea>
+                        <textarea class="form-control f-c" rows="5" id="detall_libr1" required style="resize: none;"
+                            type="text"></textarea>
                         <div id="descrip_error_libr1" class="error-message"></div>
                     </div>
-         
+
                     <div class="w3-center">
                         <button type="submit" class="btn" style="margin-top: 25px;">Buscar</button>
                     </div>
-                  </form>
+                </form>
             </div>
 
         </div>
@@ -161,7 +121,7 @@
 
     <script src="../js/form.js"></script>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             form_buscar();
         };
     </script>
