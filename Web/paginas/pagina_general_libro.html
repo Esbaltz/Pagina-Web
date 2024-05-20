@@ -151,17 +151,6 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    // Toggle between showing and hiding the sidebar when clicking the menu icon
-    function w3_open() {
-      var mySidebar = document.getElementById("mySidebar");
-      mySidebar.style.display = (mySidebar.style.display === 'block') ? 'none' : 'block';
-    }
-
-    // Close the sidebar with the close button
-    function w3_close() {
-      var mySidebar = document.getElementById("mySidebar");
-      mySidebar.style.display = 'none';
-    }
 
     $(document).ready(function() {
       // Realizar solicitud a la API de Google Books para obtener la descripción del libro "Holly" de Stephen King en español
@@ -188,5 +177,6 @@
       });
     });
   </script>
+  <script src="../js/menus.js"></script>
 </body>
 </html>

@@ -1,218 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
+    <title>ENTRE VERBOS</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entre Verbos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            margin-top: 20px;
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
         }
 
-        .category-menu {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 56px 0;
-        }
-
-        .category-menu h5 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .category-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .category-menu ul li {
-            padding: 8px 0;
-            font-size: 1.2rem;
-            transition: 0.2s;
-        }
-
-        .category-menu ul li:hover {
-            background-color: #495057;
-        }
-
-        /* Agrega margen a ambos lados del contenedor */
-        .category-menu .container-fluid {
-            margin-left: 15px;
-            margin-right: 15px;
+        body,
+        html {
+            height: 100%;
+            line-height: 1.8;
         }
 
         a {
             text-decoration: none;
-            color: inherit;
         }
+
+        /* Full height image header */
+        .bgimg-1 {
+            background-position: center;
+            background-size: cover;
+            background-image: url("../img/inicio-img.jpg");
+            min-height: 100%;
+        }
+
+        .w3-bar .w3-button {
+            padding: 16px;
+        }
+
+        .img-move {
+            display: block;
+        }
+
+        .img-move img {
+            transition: 0.3s;
+        }
+
+        .img-move:hover img {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        .efect {
+            transition: 0.3s;
+        }
+
+        .efect:hover {
+            transform: scale(1.05);
+            letter-spacing: 5px;
+        }
+
+        .l-efect a {
+            transition: 0.5s;
+        }
+
+        .foot a {
+            transition: 0.3s;
+        }
+
+        .cat {
+            transition: 0.3s;
+        }
+
+        .book img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .fade-line {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, black, transparent);
+        }
+
+        /* Estilo para la fila de libros */
+        .book-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Estilo para los libros */
+        .book {
+            width: 150px;
+            text-align: center;
+            
+            padding-right: 6px;
+            padding-left: 6px;
+            padding-bottom: 5px;
+            /* Espacio entre el libro y la línea */
+        }
+
+        /* Estilo para la línea debajo del libro al hacer hover */
+        .book:hover {
+            position: relative;
+            /* Ajusta la posición de la línea relativa al libro */
+        }
+
+        /* Estilo para la línea debajo del libro */
+        .book::after {
+            content: '';
+            /* Añade contenido al seudoelemento */
+            position: absolute;
+            /* Coloca el seudoelemento en una posición absoluta */
+            left: 0;
+            /* Ajusta la posición inicial de la línea */
+            bottom: 0;
+            /* Ajusta la posición vertical de la línea */
+            width: 100%;
+            /* Ancho de la línea */
+            height: 2px;
+            /* Grosor de la línea */
+            background-color: transparent;
+            /* Color de la línea (inicialmente transparente) */
+            transition: background-color 0.3s ease;
+            /* Transición suave del color de fondo */
+        }
+
+        /* Estilo para la línea debajo del libro al hacer hover */
+        .book:hover::after {
+            background-color: black;
+            /* Color de la línea al hacer hover */
+        }
+        
     </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <img src="../img/Logo.PNG" alt="Avatar Logo" style="width:40px;" class="rounded-pill mx-3">
-            <a class="navbar-brand" href="#">ENTRE VERBOS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mynavbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../paginas/pagina_carrito_general.html">Carrito</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="paginas_inicio_secion/Inicio_secion.html">Iniciar Sesión</a>
-                    </li>
-                </ul>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="index.html" class="w3-bar-item w3-button w3-wide efect">Entre Verbos</a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small l-efect">
+                <a href="index.html" class="w3-bar-item w3-button">Inicio</a>
+                <a href="tienda.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Tienda</a>
+                <a href="pagina_carrito_general.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>
+                    Carrito</a>
+                <a href="paginas_inicio_secion/Inicio_secion.html" class="w3-bar-item w3-button"><i
+                        class="fa fa-envelope"></i> Iniciar Sesión</a>
+                <a href="usuario/user.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> Usuario</a>
             </div>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar
+            ×</a>
+        <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+        <a href="tienda.html" onclick="w3_close()" class="w3-bar-item w3-button">Tienda</a>
+        <a href="pagina_carrito_general.html" onclick="w3_close()" class="w3-bar-item w3-button">Carrito</a>
+        <a href="paginas_inicio_secion/Inicio_secion.html" onclick="w3_close()" class="w3-bar-item w3-button">Iniciar Sesión</a>
+        <a href="usuario/user.html" onclick="w3_close()" class="w3-bar-item w3-button">Usuario</a>
     </nav>
 
-    <!-- Menú de Categorías -->
-    <div class="container-fluid category-menu">
-        <div class="container"> <!-- Cambiado de class="container-fluid" a class="container" -->
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <h5>Ficción</h5>
-                    <ul>
-                        <a href="libros_categorias/sci_fi.html">
-                            <li>Ciencia Ficción</li>
-                        </a>
-                        <a href="libros_categorias/terror.html">
-                            <li>Terror</li>
-                        </a>
-                        <a href="libros_categorias/misterio.html">
-                            <li>Misterio</li>
-                        </a>
-                    </ul>
-                </div>
-                <div class="col-md-6 text-center">
-                    <h5>No Ficción</h5>
-                    <ul>
-                        <a href="libros_categorias/biografia.html">
-                            <li>Biografía</li>
-                        </a>
-                        <a href="libros_categorias/historia.html">
-                            <li>Historia</li>
-                        </a>
-                    </ul>
-                </div>
+
+    <!-- Fila de libros -->
+
+    <div style="padding-top: 125px;">
+        <div class="w3-center">
+            <a href="libros_categorias/sci_fi.html" class="book">Sci-fi</a>
+            <a href="libros_categorias/misterio.html" class="book"> Misterio</a>
+            <a href="libros_categorias/terror.html" class="book">Terror</a>
+            <a href="libros_categorias/historia.html" class="book">Historia</a>
+            <a href="libros_categorias/biografia.html" class="book">Biografia</a>
+        </div>
+
+        <hr class="fade-line">
+    </div>
+
+
+    <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:0px">
+
+        <!-- About Section -->
+        <div class="w3-container" style="padding-top: 50px;" id="about">
+            <h1 class="w3-center w3-large w3-black" style="margin-right:10%; margin-left: 10%;">BEST SELLER</h1>
+            <p class="w3-center w3-large">En esta sección encontrarás los libros más vendidos</p>
+        </div>
+
+        <!-- First Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/Autonomous_libro.jpg" alt="Sandwich" style="width:100%">
+                </a>
+                <h3>Autonumus</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/El_hobit.jpg" alt="Steak" style="width:100%">
+                </a>
+                <h3>El hobbit</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/Holly_stephen_king.jpg" alt="Cherries" style="width:100%">
+                </a>
+                <h3>Holly</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/metro.jpg" alt="Pasta and Wine" style="width:100%">
+                </a>
+                <h3>Metro</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="w3-container" style="padding-top: 50px;" id="about">
+            <h1 class="w3-center w3-large w3-black" style="margin-right: 10%; margin-left: 10%;">OFERTAS</h1>
+            <p class="w3-center w3-large">En esta sección encontrarás las mejores ofertas</p>
+        </div>
+        <!-- Second Photo Grid-->
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/historia2.png" alt="Popsicle" style="width:100%">
+                </a>
+                <h3>Breve historia del mundo</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/metro.jpg" alt="Salmon" style="width:100%">
+                </a>
+                <h3>Metro</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.
+                </p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/Holly_stephen_king.jpg" alt="Sandwich" style="width:100%">
+                </a>
+                <h3>Holly</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div class="w3-quarter">
+                <a href="pagina_general_libro.html" class="img-move">
+                    <img src="../img/El_hobit.jpg" alt="Croissant" style="width:100%">
+                </a>
+                <h3>El hobbit</h3>
+                <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
             </div>
         </div>
     </div>
 
-    <!-- Cartas -->
-    <div class="container mt-5">
-        <h2 class="text-center">BEST SELLERS</h2>
-        <div class="row mt-2">
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/Autonomous_libro.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/El_hobit.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el segundo mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/metro.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el tercer mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/Holly_stephen_king.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el cuarto mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container mt-5">
-        <h2 class="text-center">RECOMENDADOS</h2>
-        <div class="row mt-2">
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/El_hobit.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/Holly_stephen_king.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el segundo mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/El_hobit.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el tercer mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mt-3">
-                <div class="card">
-                    <img class="card-img-top" src="../img/Un camino hacia la libertad.jpg" alt="Card image">
-                    <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Es probablemente el cuarto mejor libro de la historia</p>
-                        <a href="pagina_general_libro.html" class="btn btn-primary">Comprar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Pie de página -->
-    <footer class="pie text-center mt-4">
-        <div class="container">
-            <p>&copy; 2024 Todos los derechos reservados.</p>
-            <p>Hecho con <span class="text-danger">&hearts;</span> por Entre Verbos</p>
-        </div>
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-64 foot">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Al inicio</a>
+        <p>Hecho por <a href="index.html" title="Regresar al inicio" target="_blank" class="w3-hover-text-green">Entre
+                Verbos</a></p>
     </footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script src="../js/menus.js"></script>
 </body>
 
 </html>
