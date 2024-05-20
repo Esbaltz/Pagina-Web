@@ -145,6 +145,29 @@
             opacity: 1;
             font-weight: bold;
         }
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .toggle-btn {
+            font-size: 20px;
+            width: 120px;
+            margin: 0 10px;
+            /* Ajusta el espacio entre el texto y las flechas según sea necesario */
+            font-weight: bold;
+        }
+
+        .toggle-arrows {
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-arrows>div {
+            cursor: pointer;
+        }
     </style>
 
 </head>
@@ -190,11 +213,25 @@
 
     <div style="padding-top: 125px;">
         <div class="w3-center">
-            <a href="sci_fi.html" class="book">Sci-fi</a>
-            <a href="misterio.html" class="book"> Misterio</a>
-            <a href="terror.html" class="book sc">Terror</a>
-            <a href="historia.html" class="book">Historia</a>
-            <a href="biografia.html" class="book">Biografia</a>
+            <div class="category-header">
+                <div class="toggle-arrows">
+                    <div onclick="toggleCategory()"><i class="fa fa-chevron-left"></i></div>
+                </div>
+                <div class="toggle-btn">Ficción</div>
+                <div class="toggle-arrows">
+                    <div onclick="toggleCategory()"><i class="fa fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <div class="category-list" id="fiction-categories">
+                <a href="sci_fi.html" class="book">Sci-fi</a>
+                <a href="misterio.html" class="book"> Misterio</a>
+                <a href="terror.html" class="book sc">Terror</a>
+            </div>
+            <div class="category-list" id="nonfiction-categories" style="display: none;">
+                <a href="historia.html" class="book">Historia</a>
+                <a href="biografia.html" class="book">Biografía</a>
+            </div>
         </div>
 
         <hr class="fade-line">
@@ -294,6 +331,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
     <script src="../../js/menus.js"></script>
+    <script src="../../js/categorias.js"></script>
 </body>
 
 </html>
